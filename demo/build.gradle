@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+ 
+sourceCompatibility = 1.8   
+webAppDirName = 'WebContent'  
+sourceSets.main.java.srcDir 'src' 
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+
+repositories {  
+    mavenCentral() 
+}
+ 
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    providedCompile 'javax.servlet:javax.servlet-api:3.0.1' 
+    providedRuntime 'javax.servlet:jstl:1.2'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.12'
+}
