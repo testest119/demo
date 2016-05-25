@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/demo">
+	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver"
+		logAbandoned="true" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/adan"
+		password="055753" removeAbandoned="true" removeAbandonedTimeout="60"
+		type="javax.sql.DataSource" url="jdbc:mysql://192.168.14.142:3306/demo_friday"
+		username="friday" />
+</Context>

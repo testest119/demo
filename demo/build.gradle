@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'war'
 apply plugin: 'eclipse-wtp'
+
  
 sourceCompatibility = 1.8   
 webAppDirName = 'WebContent'  
@@ -17,6 +18,11 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.+'
     providedCompile 'javax.servlet:javax.servlet-api:3.0.1' 
     providedRuntime 'javax.servlet:jstl:1.2'
+    // http://mvnrepository.com/artifact/mysql/mysql-connector-java
+	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.6'
+	// http://mvnrepository.com/artifact/commons-codec/commons-codec
+	compile group: 'commons-codec', name: 'commons-codec', version: '1.10'
+	
 }
 
 task wrapper(type: Wrapper) {
